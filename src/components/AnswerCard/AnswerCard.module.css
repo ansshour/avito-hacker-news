@@ -1,0 +1,19 @@
+.answer {
+    padding: 10px 0;
+    padding-left: 25px;
+    border-bottom: 1px solid lightgray;
+}
+
+.answer:last-child {
+    border-bottom: 0;
+}
+
+.author {
+    display: inline-block;
+    margin-bottom: 7px;
+    font-size: 1.25rem;
+}
+
+.order {
+    margin-right: 3px;
+}

@@ -1,0 +1,23 @@
+.news {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.top {
+    margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+    .news {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .news {
+        grid-template-columns: 1fr;
+    }
+}

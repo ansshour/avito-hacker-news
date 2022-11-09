@@ -1,0 +1,43 @@
+.commentCard {
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px rgba(34, 60, 80, 0.2);
+    user-select: none;
+    background-color: white;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.author {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.arrow {
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    transform: rotate(135deg);
+}
+
+.openButton {
+    display: inline-flex;
+    gap: 10px;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.openButton:hover {
+    background-color: rgb(250, 250, 250);
+}
+
+.answers {
+    margin-top: 10px;
+}

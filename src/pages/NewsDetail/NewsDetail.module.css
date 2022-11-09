@@ -1,0 +1,68 @@
+.top {
+    margin-top: 20px;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 2rem;
+    color: #333;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.link {
+    display: inline-block;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: #333;
+}
+
+.date {
+    font-size: 1.25rem;
+    color: #999;
+}
+
+.author {
+    color: #333;
+    margin-top: 2px;
+    font-size: 1.25rem;
+}
+
+.comments {
+    border-top: 1px solid lightgray;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.commentsTitle {
+    padding: 10px 0;
+    font-size: 2rem;
+}
+
+.commentsCount {
+    display: inline-block;
+    font-size: 1.25rem;
+    color: rgba(0, 0, 0, .4);
+    transform: translate(2px, -7px);
+}
+
+.commentsCards {
+    display: grid;
+    gap: 20px;
+}
+
+.btn {
+    margin-bottom: 10px;
+}
+
+.noComments {
+    font-size: 1.25rem;
+    color: #333;
+}
