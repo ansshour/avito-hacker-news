@@ -8,6 +8,7 @@
     transition: background-color 0.2s;
     box-sizing: border-box;
     height: 100%;
+    flex-shrink: 0;
 }
 
 .container:hover {

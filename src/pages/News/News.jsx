@@ -7,6 +7,7 @@ import styles from "./News.module.css"
 import { Link } from "react-router-dom"
 import { fetchNews, updateNews } from "../../store/newsSlice"
 import { Loader } from "../../components/Loader/Loader"
+import { NewsSkeleton } from "../../components/Skeletons/NewsSkeleton"
 
 export const News = () => {
 
@@ -30,7 +31,9 @@ export const News = () => {
                 <Button onClick={() => { dispatch(updateNews()) }}>Update news</Button>
             </div>
             <div className={styles.news}>
-                {status === "loading" && <Loader />}
+                {status === "loading" && (
+                    [...new Array(20)].map(() => <NewsSkeleton />)
+                )}
                 {status === "success" && news.map(({ id, title, score, by, time }) => <Link to={`/news/${id}`} key={id}><NewsCard id={id} name={title} rating={score} authorName={by} date={time} /></Link>)}
                 {status === "error" && <p>Error</p>}
             </div>

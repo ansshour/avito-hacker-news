@@ -15,6 +15,7 @@ export const NewsDetail = () => {
 
     const { currentNews, status } = useSelector(store => store.news)
     const { statusComments, comments } = useSelector(store => store.comments)
+    const { statusChildComments } = useSelector(store => store.comments)
 
     const navigate = useNavigate()
     const { id } = useParams()
@@ -32,7 +33,7 @@ export const NewsDetail = () => {
                 <Button onClick={() => navigate(-1)}>Back to all news</Button>
             </div>
             <div className={styles.content}>
-                {status === "loading" && <Loader />}
+                {(status === "loading" || statusChildComments === "loading") && <Loader />}
                 {status === "success" && (
                     <>
                         <div>
@@ -46,9 +47,9 @@ export const NewsDetail = () => {
                             <div className={styles.btn}><Button onClick={() => { dispatch(fetchComments(id)) }}>Update comments</Button></div>
                             <div className={styles.commentsCards}>
                                 {comments.length ? (
-                                    comments.map(({ by, text, kids, id, deleted }) => !deleted ? <CommentCard key={id} author={by} text={text} kids={kids} id={id} /> : null)
+                                    comments.map(({ by, text, kids, id, deleted, dead }) => !deleted && !dead ? <CommentCard key={id} author={by} text={text} kids={kids} id={id} /> : null)
                                 ) : (
-                                    <p className={styles.noComments}>The list of comments is empty</p>
+                                    null
                                 )}
                             </div>
                         </div>

@@ -11,7 +11,6 @@ export const CommentCard = ({ author, text, kids, id }) => {
 
     return (
         <div className={styles.commentCard}>
-            {statusChildComments === "loading" && <Loader />}
             <p className={styles.author}>Author: {author}</p>
             <p dangerouslySetInnerHTML={{ __html: text }} />
             {kids && (

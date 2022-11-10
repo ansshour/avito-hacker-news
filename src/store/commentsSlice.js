@@ -44,6 +44,7 @@ const commentsSlice = createSlice({
     reducers: {},
     extraReducers: {
         [fetchComments.pending]: (state) => {
+            state.comments = []
             state.statusComments = "loading"
         },
         [fetchComments.fulfilled]: (state, action) => {
